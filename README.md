@@ -10,13 +10,13 @@ Noter , a simple wordpress theme just for note;
 
 siinger , a wordpress theme
 
-## Feature
+### Feature
 
 - banner
 - pjax
 - one column
 - responsive
 
-## Site
+### Site
 
 [demo site](https://siinger.com)
