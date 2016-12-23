@@ -86,7 +86,7 @@
 			</li>
 		<?php }?>
 	<?php endwhile; ?></ul><?php endif; };?>
-	<!-- div class="nav">
+	<div class="nav">
 		<nav class="navigator">
 			<?php if ( get_previous_posts_link() ) {
 				previous_posts_link("上一页");
@@ -98,6 +98,6 @@
 				echo '<span>下一页</span>';
 			} ?>
 		</nav>
-	</div -->
+	</div>
 </section>
 <?php get_footer(); ?>
