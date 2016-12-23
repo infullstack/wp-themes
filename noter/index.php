@@ -74,7 +74,7 @@
 				<div class="p_time"><i class="fa fa-sun-o"></i>&nbsp;&nbsp;<?php the_time('Y-m-d') ?><i class="fa fa-empire"></i>&nbsp;&nbsp;<?php the_category(' &bull; '); ?></div>
 			</article>
 			<div class="tags">
-			<?php wp_tag_cloud(); ?>
+			<?php wp_tag_cloud(array('number'=>25)); ?>
 			</div>
 			<ul class="post-list">
 		<?php } else { ?>
@@ -86,8 +86,18 @@
 			</li>
 		<?php }?>
 	<?php endwhile; ?></ul><?php endif; };?>
+	<!-- div class="nav">
+		<nav class="navigator">
+			<?php if ( get_previous_posts_link() ) {
+				previous_posts_link("上一页");
+			} else {
+				echo '<span>上一页</span>';
+			} ?><?php echo '<span class="pagenum">' . max( 1, get_query_var('paged') ) . '/' . $wp_query->max_num_pages . '</span>'; ?><?php if ( get_next_posts_link() ) {
+				next_posts_link("下一页");
+			} else {
+				echo '<span>下一页</span>';
+			} ?>
+		</nav>
+	</div -->
 </section>
-<nav class="navigator">
-	<?php previous_posts_link('<i class="fa fa-angle-left"></i>') ?><?php next_posts_link('<i class="fa fa-angle-right	"></i>') ?>
-</nav>
 <?php get_footer(); ?>

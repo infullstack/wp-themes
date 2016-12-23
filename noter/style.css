@@ -10,7 +10,7 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;outline:none;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0;}
 html,body{height:100%;}
 body{color:rgba(0,0,0,0.7);font-family:'PingFang SC','Hiragino Sans GB','PingHei','Open Sans',sans-serif,Helvetica Neue,'Work Sans','Microsoft YaHei',SimSun;font-size:15px;width:100%;background-color:#e3ebec;}
-body,input,button,textarea{-webkit-appearance:none;border-radius:0;letter-spacing:.04em;line-height:2.4em;font-size:15px;}
+body,input,button,textarea{-webkit-appearance:none;border-radius:0;letter-spacing:.04em;line-height:2em;font-size:15px;}
 p{color:#333;}
 br{display:block;line-height:1.6em;}
 ol,ul,li{list-style:none;}
@@ -25,7 +25,7 @@ a:hover{color:#1F1F1F;}
 img{border:0;max-width:100%;}
 .navigator .fa{font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:0.2px;-moz-osx-font-smoothing:grayscale;}
 .clearer{display:block;clear:both;}
-.container{min-height:800px;}
+.container{}
 .container,#footer{padding:0px 50px 50px;height:auto;margin:0 auto;}
 .left{float:left;}
 .right{float:right;}
@@ -127,7 +127,7 @@ h3.home-title:after {
     border: 1px solid #d9d9d9;
     font-size: 8pt !important;
     font-weight: normal;
-    line-height: 25px;
+    line-height: 38px;
     font-family: "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
@@ -154,7 +154,7 @@ h3.home-title:after {
 .wp-caption{max-width: 100%;text-align: center;}
 .single embed{max-width:100%;margin:10px auto;display:block;}
 .single a{text-decoration:none;}
-.single p{margin:0 0 10px;}
+.single p{margin:0 0 20px;}
 .single a,.single p a span{color:#27a!important;padding:0px 3px;}
 .single p a span{padding:0;}
 .single p a:hover,.single p a:hover span{background:#1F1F1F;color:#fff!important;}
@@ -199,6 +199,7 @@ h6{font-size:1.3rem;}
 .single .wp-caption{width:700px !important}
 .wp-caption-text{font-style: italic;text-align: center;text-indent: 0em !important;}
 .single .meta{margin: 30px 0px;}
+.single .meta p{margin:4px 0px;}
 .single .meta *{font-size: 13px;color: #777 !important;line-height: 2em;}
 /* 赏赐 */
 .reward{width:30px;height:30px;line-height:30px;font-size:18px;color:#fff;border-radius:100px;text-align:center;position:relative;border:1px solid #f1b60e;background:#fccd60;cursor:pointer;position:absolute;left:66px;top:14px;}
@@ -261,11 +262,24 @@ h6{font-size:1.3rem;}
 .commentlist > .comment{position:relative;}
 .commentlist > .comment:before{content:'#'counter(comment-floor);counter-increment:comment-floor;font-size:18px;position:absolute;top:40px;right:0;color:#ccc;}
 /* 翻页按钮 */
-.navigator{text-align:center;background:none;border:0;}
-.navigator a{margin:0 5%;width:40px;height:40px;display:inline-block;border-radius:100px;border:1px solid #ddd;color:#aaa;}
-.navigator a i{font-size:30px;}
-.navigator a:hover{border:1px solid #1F1F1F;background:#1F1F1F;color:#fff;}
-.navigator a:hover i{color:#fff;}
+.nav{ text-align:center;}
+.nav *,.nav a{font-size:0.9em !important;}
+.navigator{margin:40px 0px 0px;color:#9eabb3;}
+.navigator .pagenum{color:#9eabb3;border-left:0px;border-right:0px;}
+.navigator *:first-child{
+	border-right:0px;
+}
+.navigator *:last-child{
+	border-left:0px;
+}
+.navigator span,.navigator a{
+	border: #eee 1px solid;
+	padding:8px;
+}
+.navigator a{
+    color: #888;
+}
+.navigator a:hover{background-color:#27a;color:#fff;border-color:#27a}
 .is-loading div,.load .load_comments div{background-color:#1F1F1F;width:10px;height:10px;margin:0 5px;display:inline-block;-webkit-animation:ball-beat 0.7s 0s infinite linear;animation:ball-beat 0.7s 0s infinite linear;}
 .is-loading div:nth-child(2n-1),.load .load_comments div:nth-child(2n-1){-webkit-animation-delay:0.35s !important;animation-delay:0.35s !important;}
 .load .load_comments{text-align:center;margin:10% 0;}
