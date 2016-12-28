@@ -25,8 +25,8 @@ a:hover{color:#1F1F1F;}
 img{border:0;max-width:100%;}
 .navigator .fa{font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:0.2px;-moz-osx-font-smoothing:grayscale;}
 .clearer{display:block;clear:both;}
-.container{}
-.container,#footer{padding:0px 50px 50px;height:auto;margin:0 auto;}
+.container{min-height:500px;}
+.container{padding:0px 50px 50px;height:auto;margin:0 auto;}
 .left{float:left;}
 .right{float:right;}
 /* 布局 */
@@ -49,6 +49,7 @@ img{border:0;max-width:100%;}
 #header{padding:60px 40px 20px;width:260px;float:left;}
 #header .logo{font-size:16px;font-weight:bold;}
 #header .logo img{width:150px;margin-bottom:10px;border-radius:5px;}
+#header img{max-width:150px;}
 #header .logo a p{color:#da4939;font-family: kaiti;font-size: 20px;color: #da4939;}
 #header .logo:hover i{font-size:20px;right:-29px;opacity:1;}
 #header .social-links{list-style:none;font-size:14px;}
@@ -295,7 +296,7 @@ ul.link-items{overflow:hidden;padding:0;background:none;}
 ul.link-items li{width:19.4%;display:inline-block;text-align:center;}
 ul.link-items li img{width:50%;border-radius:100%;margin-bottom:0;}
 /* 页脚 */
-#footer{color:#ccc;border-top:1px solid #eee;margin:0px 50px;padding:20px 0px;text-shadow:0 1px 1px #eee;font-size:12px;text-shadow:none;}
+#footer{color:#ccc;text-shadow:0 1px 1px #eee;font-size:12px;text-shadow:none;margin:0px 50px;padding:20px 0px;border-top:1px solid #eee;}
 #footer a{text-shadow:none;}
 #footer *:hover{color:#19A97B}
 #footer .copyright a{margin:0px 2px;}
@@ -354,7 +355,7 @@ body ::-moz-selection {background: #50be4b}
 */
 /* 代码高亮 */
 .single pre{position:relative;font:14px/22px courier new;position:relative;margin:0px 0px;background-color:#f8f8f8;}
-.single pre{background-color: #f8f8f8;overflow: hidden;font-size: 12px;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;}
+.single pre,.singer code{background-color: #f8f8f8;overflow: hidden;font-size: 12px;white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;}
 .single pre.prettyprint{margin-bottom: 20px}
 .single pre code{color: inherit;white-space: pre;white-space: pre-wrap;background-color: transparent;border: 0;}
 .prettyprint.linenums,pre.prettyprint.linenums{-webkit-box-shadow: inset 40px 0 0 #f8f8f8,inset 42px 0 0 #33b796;-moz-box-shadow: inset 40px 0 0 #f8f8f8,inset 42px 0 0 #33b796;box-shadow: inset 40px 0 0 #f8f8f8,inset 42px 0 0 #33b796}
