@@ -14,7 +14,7 @@
 				<div class="meta">
 					<p>— 转载本站文章请注明作者和出处<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a> ，请勿用于任何商业用途</p>
 					<p>— 于 <?php the_time('Y年m月d日') ?> ，共写了 <?php echo count_words(get_the_content())?> 字；</p>
-					<p>— 本文共有 <?php echo count(get_the_tags(),0);?> 个标签：<?php the_tags(); ?></p>
+					<p>— 本文共有 <?php echo count(get_the_tags(),0);?> 个<?php the_tags(); ?></p>
 				</div>
 			</article>
 		<?php } else { ?>
@@ -85,7 +85,7 @@
 				<span class="category"><?php the_category(' &bull; '); ?></span>
 			</li>
 		<?php }?>
-	<?php endwhile; ?></ul><?php endif; };?>
+	<?php endwhile; ?></ul>
 	<div class="nav">
 		<nav class="navigator">
 			<?php if ( get_previous_posts_link() ) {
@@ -99,5 +99,6 @@
 			} ?>
 		</nav>
 	</div>
+	<?php endif; };?>
 </section>
 <?php get_footer(); ?>
