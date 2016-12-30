@@ -286,7 +286,6 @@ h6{font-size:1.3rem;}
 .is-loading div,.load .load_comments div{background-color:#1F1F1F;width:10px;height:10px;margin:0 5px;display:inline-block;-webkit-animation:ball-beat 0.7s 0s infinite linear;animation:ball-beat 0.7s 0s infinite linear;}
 .is-loading div:nth-child(2n-1),.load .load_comments div:nth-child(2n-1){-webkit-animation-delay:0.35s !important;animation-delay:0.35s !important;}
 .load .load_comments{text-align:center;margin:10% 0;}
-/*.navigation{text-align:center;margin:40px 0;}*/
 .navigation div{display:inline-block;}
 .navigation a{margin:0 20px;padding:0 12px;}
 /* 读者排行 */
