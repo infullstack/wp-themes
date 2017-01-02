@@ -2,7 +2,7 @@
 			<section class="links_adlink">
 			<?php wp_nav_menu(array('theme_location' => 'header_nav', 'echo' => true)); ?>
 			</section>
-			<div class="copyright"><a target="_blank" href="http://siinger.com">Theme by Singer, </a><a target="_blank" href="http://www.wordpress.cn">Proudly published with Wordpress</a></div>
+			<div class="copyright"><a target="_blank" href="http://infullstack.com">Theme by InFullStack, </a><a target="_blank" href="http://www.wordpress.cn">Proudly published with Wordpress</a></div>
 		</footer>		
 		</div>
 	</div>
