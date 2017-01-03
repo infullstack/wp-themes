@@ -20,7 +20,7 @@ blockquote:before,blockquote:after,q:before,q:after{content:none;}
 strong,b{font-weight:bold;}
 em,i{font-style:italic;}
 table{border-collapse:collapse;border-spacing:0;}
-a{color:#333;text-decoration:none;position:relative;}
+a{color:#333;text-decoration:none;}
 a:hover{color:#1F1F1F;}
 img{border:0;max-width:100%;}
 .navigator .fa{font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:0.2px;-moz-osx-font-smoothing:grayscale;}
@@ -215,7 +215,7 @@ h6{font-size:1.3rem;}
     white-space: nowrap;
     text-overflow: ellipsis;}
 .about span{padding-left:10px;}
-.about a{top:10px}
+.about a{top:10px;position: relative;}
 .about img{width:30px;height:30px;border-radius:100%;border:1px solid #ccc;cursor:pointer;}
 /* 社交 */
 .sns{margin:0 10px;float:right}
@@ -286,6 +286,7 @@ h6{font-size:1.3rem;}
 .is-loading div,.load .load_comments div{background-color:#1F1F1F;width:10px;height:10px;margin:0 5px;display:inline-block;-webkit-animation:ball-beat 0.7s 0s infinite linear;animation:ball-beat 0.7s 0s infinite linear;}
 .is-loading div:nth-child(2n-1),.load .load_comments div:nth-child(2n-1){-webkit-animation-delay:0.35s !important;animation-delay:0.35s !important;}
 .load .load_comments{text-align:center;margin:10% 0;}
+/*.navigation{text-align:center;margin:40px 0;}*/
 .navigation div{display:inline-block;}
 .navigation a{margin:0 20px;padding:0 12px;}
 /* 读者排行 */
@@ -371,4 +372,125 @@ body ::-moz-selection {background: #50be4b}
 .prettyprint .kwd,.prettyprint .tag{color: #f92659}
 .prettyprint .typ,.prettyprint .atn,.prettyprint .dec,.prettyprint .var{color: #0a0}
 .prettyprint .pln{color: #00f}
+/*!
+ * "Fork me on GitHub" CSS ribbon v0.2.0 | MIT License
+ * https://github.com/simonwhitaker/github-fork-ribbon-css
+*/
 
+.github-fork-ribbon {
+  width: 12.1em;
+  height: 12.1em;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 13px;
+  text-decoration: none;
+  text-indent: -999999px;
+}
+
+.github-fork-ribbon.fixed {
+  position: fixed;
+}
+
+.github-fork-ribbon:before, .github-fork-ribbon:after {
+  /* The right and left classes determine the side we attach our banner to */
+  position: absolute;
+  display: block;
+  width: 15.38em;
+  height: 1.54em;
+  
+  top: 3.23em;
+  right: -3.23em;
+  
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.github-fork-ribbon:before {
+  content: "";
+
+  /* Add a bit of padding to give some substance outside the "stitching" */
+  padding: .38em 0;
+
+  /* Set the base colour */
+  background-color: #444;
+
+  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+
+  /* Add a drop shadow */
+  -webkit-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+
+  pointer-events: auto;
+}
+
+.github-fork-ribbon:after {
+  /* Set the text from the title attribute */
+  content: attr(title);
+
+  /* Set the text properties */
+  color: #fff;
+  font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.54em;
+  text-decoration: none;
+  text-shadow: 0 -.08em rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-indent: 0;
+
+  /* Set the layout properties */
+  padding: .15em 0;
+  margin: .15em 0;
+
+  /* Add "stitching" effect */
+  border-width: .08em 0;
+  border-style: dotted;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.github-fork-ribbon.left-top, .github-fork-ribbon.left-bottom {
+  right: auto;
+  left: 0;
+}
+
+.github-fork-ribbon.left-bottom, .github-fork-ribbon.right-bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.github-fork-ribbon.left-top:before, .github-fork-ribbon.left-top:after, .github-fork-ribbon.left-bottom:before, .github-fork-ribbon.left-bottom:after {
+  right: auto;
+  left: -3.23em;
+}
+
+.github-fork-ribbon.left-bottom:before, .github-fork-ribbon.left-bottom:after, .github-fork-ribbon.right-bottom:before, .github-fork-ribbon.right-bottom:after {
+  top: auto;
+  bottom: 3.23em;
+}
+
+.github-fork-ribbon.left-top:before, .github-fork-ribbon.left-top:after, .github-fork-ribbon.right-bottom:before, .github-fork-ribbon.right-bottom:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.back2top{position:fixed;bottom:40px;right:40px;cursor:pointer;background-color:#444;width:40px;height:40px;text-align:center;line-height:40px;border-radius:100%;-webkit-transform:translate3d(200px,0,0);transform:translate3d(200px,0,0);-webkit-transition:.5s;transition:.5s}.back2top.is-active{-webkit-transform:translateZ(0);transform:translateZ(0)}.back2top svg{fill:#fff}

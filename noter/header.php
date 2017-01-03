@@ -24,6 +24,7 @@ if ($paged > 1) {
 <meta name="keywords" content="siinger,singer">
 <meta name="description" content="singer,a full stack engineer!">
 <link href="<?php bloginfo('template_url'); ?>/style.css?20161115" type="text/css" rel="stylesheet"/>
+
 <!--[if lt IE 9]>
 <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
 <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -36,16 +37,18 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+var site_url="<?php bloginfo('url'); ?>";
 </script>
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+<a class="github-fork-ribbon left-top" href="https://github.com/infullstack" title="Fork me on GitHub">Fork me on GitHub</a>
 <div>
 <div class="pjax animated fadeIn">
 <header id="header">
 <div class="logo">
 	
-	<a href="<?php bloginfo('url'); ?>"><img src="http://oby8evr99.bkt.clouddn.com/bg_7.jpg?imageView2/0/w/500/interlace/1"><p><?php bloginfo('name'); ?></p></a>
+	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/bg_7.jpg"><p><?php bloginfo('name'); ?></p></a>
 	<p class="description"><?php bloginfo('description'); ?></p>
 </div>
 <?php get_sidebar(); ?>

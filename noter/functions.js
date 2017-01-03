@@ -1,4 +1,3 @@
-
 //重载
 function overloaded(){		
     jQuery(document).ready(function(){
@@ -30,7 +29,9 @@ function browserinit(){
 		$("#bg").css("position","fixed");
 	}
 }
-$(function() {    
+$(function() {
+	$("a:not([href*='"+site_url+"'])").attr("target","_blank");
+	$(window).on("scroll",function(){var t=$(this).scrollTop();t>200?$(".back2top").addClass("is-active"):$(".back2top").removeClass("is-active")}),$(document).on("click",".back2top",function(){$("html,body").animate({scrollTop:0},800)});
     a();
 	browserinit();
 	codePretty();
