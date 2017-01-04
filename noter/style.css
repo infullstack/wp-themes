@@ -203,7 +203,7 @@ h6{font-size:1.3rem;}
 .single .meta p{margin:4px 0px;}
 .single .meta *{font-size: 13px;color: #777 !important;line-height: 2em;}
 /* 赏赐 */
-.reward{width:30px;height:30px;line-height:30px;font-size:18px;color:#fff;border-radius:100px;text-align:center;position:relative;border:1px solid #f1b60e;background:#fccd60;cursor:pointer;position:absolute;left:66px;top:14px;}
+.reward{width:30px;height:30px;line-height:30px;font-size:18px;color:#fff;border-radius:100px;text-align:center;position:relative;border:1px solid #f1b60e;background:#fccd60;cursor:pointer;top:14px;}
 .reward ul{z-index:1;display:none;position:absolute;top:-60px;right:-280px;padding:6px;font-size:13px;width:260px;height:150px;background:#fff;border:1px solid #e6e6e6;box-shadow:0 1px 1px 1px #efefef}
 .reward ul:after,.reward ul:before{position:absolute;content:'';border:10px solid transparent;top:50%;left:-20px;margin-top:-10px;}
 .reward ul:before{left:-21px;border-right-color:#e6e6e6;}
