@@ -17,28 +17,6 @@
 					<p>— 于 <?php the_time('Y年m月d日') ?> ，共写了 <?php echo count_words(get_the_content())?> 字；</p>
 					<p>— 本文共有 <?php echo count(get_the_tags(),0);?> 个<?php the_tags(); ?></p>
 				</div>
-				<!-- JiaThis Button BEGIN -->
-				<div class="jiathis_style">
-					<a class="jiathis_button_weixin"></a>
-					<a class="jiathis_button_tsina"></a>	
-					<a class="jiathis_button_douban"></a>
-					<a class="jiathis_button_tqq"></a>	
-					<a class="jiathis_button_cqq"></a>
-					<a class="jiathis_button_instapaper"></a>	
-					<a class="jiathis_button_twitter"></a>
-					<a class="jiathis_button_ydnote"></a>	
-					<a class="jiathis_button_gmail"></a>
-					<a class="jiathis_button_cyzone"></a>
-					<a class="jiathis_button_tumblr"></a>
-					<a class="jiathis_button_delicious"></a>	
-					<a class="jiathis_button_linkedin"></a>
-					<a class="jiathis_button_email"></a>
-					<a class="jiathis_button_print"></a>
-					<a class="jiathis_button_copy"></a>
-					<a class="jiathis_button_fav"></a>
-				</div>
-				<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
-				<!-- JiaThis Button END -->
 			</article>
 			<?php if(get_the_author_meta('alipay')||get_the_author_meta('wechatpay')){ ?>
 				<div class="reward">
@@ -93,7 +71,7 @@
 			<article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
 				<h2 itemprop="name headline" class="title"><a href="<?php the_permalink();?>"><i class="fa fa-star" style="font-size: 16px;"></i>&nbsp;&nbsp;<?php the_title();?></a></h2>
 				<p><?php echo mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 500,"...");?></p>
-				<div class="p_time"><i class="fa fa-sun-o"></i>&nbsp;&nbsp;<?php the_time('Y-m-d') ?><i class="fa fa-empire"></i>&nbsp;&nbsp;<?php the_category(' &bull; '); ?></div>
+				<div class="p_time"><i class="fa fa-sun-o"></i>&nbsp;&nbsp;<?php the_time('Y-m-d') ?><i class="fa fa-empire"></i>&nbsp;&nbsp;<?php the_category(' &bull; '); ?><a class="title-more" href="<?php the_permalink();?>">阅读更多</a></div>
 			</article>
 			<div class="tags">
 			<?php wp_tag_cloud(array('number'=>25)); ?>

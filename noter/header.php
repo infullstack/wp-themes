@@ -42,35 +42,14 @@ var site_url="<?php bloginfo('url'); ?>";
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<a class="github-fork-ribbon left-top" href="https://github.com/infullstack" title="Fork me on GitHub">Fork me on GitHub</a>
 <div>
 <div class="pjax animated fadeIn">
 <header id="header">
 <div class="logo">
-	
-	<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/bg_7.jpg"><p><?php bloginfo('name'); ?></p></a>
+	<a href="<?php bloginfo('url'); ?>" class="header-avatar"><img src="<?php bloginfo('template_url'); ?>/bg_7.jpg"></a>
+	<h3><a href="<?php bloginfo('url'); ?>" class="header-title" ><?php bloginfo('name'); ?></a></h3>
 	<p class="description"><?php bloginfo('description'); ?></p>
 </div>
 <?php get_sidebar(); ?>
-<div class="social-links">
-	<ul>
-		<?php if(get_the_author_meta('github',1)){ ?>
-			<li><a href="<?php the_author_meta('github',1);?>" target="_blank"><i class="fa fa-github"></i></a></li>
-		<?php };?>
-		<?php if(get_the_author_meta('weibo',1)){ ?>
-			<li><a href="<?php the_author_meta('weibo',1);?>" target="_blank"><i class="fa fa-weibo"></i></a></li>
-		<?php };?>
-		<?php if(get_the_author_meta('twitter',1)){ ?>
-			<li><a href="<?php the_author_meta('twitter',1);?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-		<?php };?>
-		<?php if(get_the_author_meta('douban',1)){ ?>
-			<li><a href="<?php the_author_meta('douban',1);?>" target="_blank"><i class="fa fa-douban"></i></a></li>
-		<?php };?>
-		<?php if(get_the_author_meta('zhihu',1)){ ?>
-			<li><a href="<?php the_author_meta('zhihu',1);?>" target="_blank"><i class="fa fa-zhihu"></i></a></li>
-		<?php };?>
-		<li><a href="<?php bloginfo('url'); ?>/feed" target="_blank"><i class="fa fa-rss-square"></i></a></li>
-</ul>
-</div>
 </header>
 <div id="main">
