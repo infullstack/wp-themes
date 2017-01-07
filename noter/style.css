@@ -358,7 +358,7 @@ to{opacity:1;}}
 .pjax{width:100%;}
 #header{float:none;padding-top:40px}
 #header #sidebar,#header img,.post-title .category{display:none;}
-#main{margin-left:0px;}
+#main{margin-right:0px;}
 #footer{margin:0px 22px;}
 #header,.container{padding-left:22px;padding-right:22px;}
 #slide{height:350px;}

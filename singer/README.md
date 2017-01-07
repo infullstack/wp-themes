@@ -9,7 +9,7 @@ siinger , a wordpress theme
 
 ## Site
 
-[demo site](https://siinger.com)
+[demo site](https://github.com/Siinger/wp_theme_siinger)
 
 ## Screen
 
