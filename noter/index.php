@@ -2,7 +2,12 @@
 <section class="blockGroup container">
 	<?php if (is_single()||is_page()) { ?>
 		<?php if (is_single()) { ?>
-			<h2 itemprop="name headline" class="title"><?php the_title();?></h2>
+			<h2 itemprop="name headline" class="title"><?php the_title();?>
+				<p style="float: right;">
+					<?php if (get_next_post()) { next_post_link('%link',"<i title='上一篇 : %title' class='snav fa fa-arrow-left'></i>");} ?>
+					<?php if (get_previous_post()) {previous_post_link('%link',"<i title='下一篇 : %title' class='snav fa fa-arrow-right'></i>");}?>
+				</p>
+			</h2>
 			<div class="p_time"><?php $location = get_post_meta($post->ID, 'location', true);if (!empty ( $location )) {	?><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<?php echo $location ?><?php }?><i class="fa fa-sun-o"></i>&nbsp;&nbsp;<?php the_time('Y-m-d') ?><i class="fa fa-empire"></i>&nbsp;&nbsp;<?php the_category(' &bull; '); ?>
 			<i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?php echo fa_get_post_readtime();?> 分钟
 			</div>
@@ -17,6 +22,7 @@
 					<p>— 于 <?php the_time('Y年m月d日') ?> ，共写了 <?php echo count_words(get_the_content())?> 字；</p>
 					<p>— 本文共有 <?php echo count(get_the_tags(),0);?> 个<?php the_tags(); ?></p>
 				</div>
+				<div class="bdsharebuttonbox"><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_print" data-cmd="print" title="分享到打印"></a></div>
 			</article>
 			<?php if(get_the_author_meta('alipay')||get_the_author_meta('wechatpay')){ ?>
 				<div class="reward">
@@ -66,7 +72,17 @@
 		<?php };?>
 		</section>        
 	<?php comments_template(); 
-	} else { if (have_posts()): $x=0; while (have_posts()): the_post(); $x=$x+1;?>
+	} else { 
+	
+if (is_archive()){
+		the_archive_title( '<h2 class="page-title">', '</h2>' );
+		the_archive_description( '<h4 class="taxonomy-description">', '</h4>' );
+
+	}elseif (is_search()) { ?>
+	<h2><?php echo get_search_query(); ?>的搜索结果</h2><?php }
+
+	
+	if (have_posts()): $x=0; while (have_posts()): the_post(); $x=$x+1;?>
 		<?php if($x==1){?>
 			<article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
 				<h2 itemprop="name headline" class="title"><a href="<?php the_permalink();?>"><i class="fa fa-star" style="font-size: 16px;"></i>&nbsp;&nbsp;<?php the_title();?></a></h2>

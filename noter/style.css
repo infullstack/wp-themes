@@ -30,8 +30,10 @@ img{border:0;max-width:100%;}
 .left{float:left;}
 .right{float:right;}
 /* 布局 */
-.pjax{width:1024px;margin:0px auto;}
-#main{background:#FFFFFF;margin-right:260px;padding-top:60px;margin-top:40px;margin-bottom:40px}
+body{width:1024px;margin:0px auto;}
+.content-wrap{width: 100%;float: left;}
+#main{background:#FFFFFF;padding-top:60px;margin-top:40px;margin-bottom:40px;margin-right: 260px;
+    overflow: hidden;}
 #bg{position: absolute;background-repeat: no-repeat;background-size: cover;background-position: 50%;top: 0;left: 0;width: 100%;height: 100%;z-index:-1;-moz-opacity:0.6;opacity: 0.6;-webkit-filter: blur(90px);-moz-filter: blur(90px);-o-filter: blur(90px);}
 /* 页头 */
 .widgettitle{
@@ -46,7 +48,9 @@ img{border:0;max-width:100%;}
 .menu a{
 	color:#27a;
 }
-#header{padding:40px 0px 20px 50px;width:260px;float:right;}
+#header{padding:80px 0px 20px 50px;width:260px;float: left;
+    margin-left: -260px;
+    position: relative;}
 #header .logo{font-size:16px;font-weight:bold;}
 #header .logo .header-avatar{float: left;
     clear: both;
@@ -200,6 +204,17 @@ a:hover{color:#da4939}
 .single div.img img{width:100%;margin:auto;}
 .single div.img_3 img{width:33.333333%;float:left;margin:0;}
 .single div.img_2 img{width:50%;float:left;margin:0;}
+.snav:hover {
+	background: #ccc;
+}
+.snav {
+	font-size:8px !important;
+	padding:8px;
+	background: #ddd;
+	border-radius:100%;
+	cursor: pointer;
+	color:#fff;
+}
 h1,h2,h3,h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin:1rem 0;}
 h1{font-size:2.1rem;line-height:1.2em;}
 h2{font-size:1.9rem;line-height:1.2em;}
@@ -354,11 +369,13 @@ to{opacity:1;}}
 to{opacity:1;}}
 .fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn;}
 /* 响应式 */
-@media(max-width:720px){
-.pjax{width:100%;}
-#header{float:none;padding-top:40px}
+@media(max-width:1024px){
+*{max-width:100%;}
+body{width:100%;}
+.content-wrap{width:100%;margin-top:160px}
+#header{float:none;padding-top:40px;margin:0px;position:absolute;top:0px;}
 #header #sidebar,#header img,.post-title .category{display:none;}
-#main{margin-right:0px;}
+#main{margin-right:0px;width:100%;margin-bottom:0px;}
 #footer{margin:0px 22px;}
 #header,.container{padding-left:22px;padding-right:22px;}
 #slide{height:350px;}
